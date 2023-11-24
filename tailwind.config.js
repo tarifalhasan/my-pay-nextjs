@@ -55,6 +55,8 @@ module.exports = {
         "primary-blue": "hsl(var(--primary-blue))",
         "light-gray": "var(--light-gray)",
         "gray-550": "hsl(var(--gray-550))",
+        "light-info": "hsl(var(--light-info))",
+        "slate-info": "hsl(var(--slate-info))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -113,6 +115,24 @@ module.exports = {
             fontWeight: "400",
           },
         ],
+        "heading-1": [
+          "1.75rem",
+          {
+            lineHeight: "130%",
+            fontWeight: "600",
+          },
+        ],
+        "heading-5": [
+          "1.125rem",
+          {
+            lineHeight: "130%",
+            fontWeight: "600",
+          },
+        ],
+      },
+      boxShadow: {
+        "shadow-1":
+          "0px 12px 24px -4px rgba(145, 158, 171, 0.12), 0px 0px 2px 0px rgba(145, 158, 171, 0.20), 0px 4px 6px -6px rgba(145, 158, 171, 0.2)",
       },
     },
   },

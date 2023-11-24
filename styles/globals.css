@@ -16,7 +16,7 @@
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 224, 100%, 68%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -28,8 +28,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 217, 33%, 91%;
+    --input: 217, 33%, 91%;
     --ring: 217, 26%, 22%;
     --dark-blue-gray:217, 26%, 22%,
     --radius: 0.5rem;
@@ -37,7 +37,9 @@
     --shade-blue:224, 100%, 68%;
     --gray-md :218, 19%, 44%;
     --light-gray : #EAEFF4 ;
-    --dark-gray:218, 19%, 44%, 
+    --dark-gray:218, 19%, 44%;
+    --light-info :215, 90%, 96%, 1;
+    --slate-info:226, 24%, 27%, 1
   }
 
   .dark {

@@ -380,6 +380,7 @@ const Sidebar = () => {
           alt="rocket"
           width={136}
           height={124}
+          quality={100}
         />
       </div>
     </div>
