@@ -13,6 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
 
@@ -23,6 +24,33 @@ const schema = yup.object().shape({
   description: yup.string().required("Description est requise"),
 });
 
+const overviewData = [
+  {
+    title: "Total des tickets",
+    count: 8,
+    bgColor: "hsla(201, 100%, 95%, 1)",
+    textColoe: "hsla(224, 100%, 68%, 1)",
+  },
+  {
+    title: "Ticket en attente",
+    count: 2,
+    bgColor: "hsla(38, 93%, 95%, 1)",
+    textColoe: "hsla(38, 100%, 56%, 1)",
+  },
+  {
+    title: "Tickets ouverts",
+    count: 2,
+    bgColor: "hsla(168, 100%, 95%, 1)",
+    textColoe: "hsla(169, 85%, 47%, 1)",
+  },
+  {
+    title: "Tickets fermés",
+    count: 4,
+    bgColor: "hsla(14, 100%, 97%, 1)",
+    textColoe: "hsla(13, 93%, 70%, 1)",
+  },
+];
+
 const ClientCreateTicket = () => {
   const {
     control,
@@ -32,6 +60,7 @@ const ClientCreateTicket = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  const router = useRouter();
 
   const onSubmit = (data) => {
     toast({
@@ -43,6 +72,7 @@ const ClientCreateTicket = () => {
       ),
     });
     reset();
+    router.push("/dashboard/client/create-ticket/review-ticket");
   };
   return (
     <div className="space-y-5 xl:space-y-8">
@@ -58,7 +88,27 @@ const ClientCreateTicket = () => {
           className="absolute  left-[82%]"
         />
       </div>
-
+      <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        {overviewData.map((data, index) => (
+          <div
+            className="flex  rounded-[8px]  items-center justify-center flex-col gap-2 h-[120px]"
+            key={index}
+            style={{
+              background: `${data.bgColor}`,
+            }}
+          >
+            <h2
+              className="text-heading-3"
+              style={{ color: `${data.textColoe}` }}
+            >
+              {data.count}
+            </h2>
+            <p className="text-base" style={{ color: `${data.textColoe}` }}>
+              {data.title}
+            </p>
+          </div>
+        ))}
+      </div>
       <div>
         <div className="shadow-shadow-1 bg-white rounded-t-[8px] flex items-center p-3 md:p-5">
           <h3 className="text-heading-5">Créer un ticket</h3>

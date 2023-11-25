@@ -16,7 +16,7 @@
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 224, 100%, 68%;
+    --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -39,7 +39,8 @@
     --light-gray : #EAEFF4 ;
     --dark-gray:218, 19%, 44%;
     --light-info :215, 90%, 96%, 1;
-    --slate-info:226, 24%, 27%, 1
+    --slate-info:226, 24%, 27%, 1;
+    --light-success : 168, 100%, 95%, 1;
   }
 
   .dark {

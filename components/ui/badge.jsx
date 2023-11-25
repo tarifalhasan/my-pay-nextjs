@@ -15,6 +15,7 @@ const badgeVariants = cva(
         outline: "text-foreground border-primary-blue text-primary-blue",
         secondaryCircle:
           "border-transparent bg-primary-blue  text-white w-[22px]",
+        open: "bg-light-success border-none rounded-none px-4 text-gray-md font-medium",
       },
     },
     defaultVariants: {
