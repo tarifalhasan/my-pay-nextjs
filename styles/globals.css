@@ -31,16 +31,16 @@
     --border: 217, 33%, 91%;
     --input: 217, 33%, 91%;
     --ring: 217, 26%, 22%;
-    --dark-blue-gray:217, 26%, 22%,
+    --dark-blue-gray: 217, 26%, 22%;
     --radius: 0.5rem;
-    --primary-blue:224, 100%, 68%;
-    --shade-blue:224, 100%, 68%;
-    --gray-md :218, 19%, 44%;
-    --light-gray : #EAEFF4 ;
-    --dark-gray:218, 19%, 44%;
-    --light-info :215, 90%, 96%, 1;
-    --slate-info:226, 24%, 27%, 1;
-    --light-success : 168, 100%, 95%, 1;
+    --primary-blue: 224, 100%, 68%;
+    --shade-blue: 224, 100%, 68%;
+    --gray-md: 218, 19%, 44%;
+    --light-gray: #eaeff4;
+    --dark-gray: 218, 19%, 44%;
+    --light-info: 215, 90%, 96%, 1;
+    --slate-info: 226, 24%, 27%, 1;
+    --light-success: 168, 100%, 95%, 1;
   }
 
   .dark {
@@ -71,8 +71,8 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --shade-blue:224, 100%, 68%;
-    --gray-md :218, 19%, 44%;
+    --shade-blue: 224, 100%, 68%;
+    --gray-md: 218, 19%, 44%;
   }
 }
 
@@ -85,27 +85,35 @@
   }
 }
 
-@layer components{
-
-  .heading-6{
-    @apply text-[1rem]  font-semibold leading-[120%] text-foreground ;
+@layer components {
+  .heading-6 {
+    @apply text-[1rem]  font-semibold leading-[120%] text-foreground;
   }
-  .big-text{
-    @apply text-[1rem]  font-normal leading-[140%] tracking-[-0.32px] text-foreground  ;
+  .big-text {
+    @apply text-[1rem]  font-normal leading-[140%] tracking-[-0.32px] text-foreground;
   }
-  .text-normal{
-    @apply   text-[0.875rem] font-normal leading-[120%] tracking-[-0.28px] text-foreground;
+  .text-normal {
+    @apply text-[0.875rem] font-normal leading-[120%] tracking-[-0.28px] text-foreground;
   }
-  .heading-1{
+  .heading-1 {
     @apply text-[1.75rem] text-[#333B54] font-semibold leading-[130%];
   }
-  .heading-5{
-    @apply text-[1.125rem]  font-semibold leading-[120%] text-foreground
+  .heading-5 {
+    @apply text-[1.125rem]  font-semibold leading-[120%] text-foreground;
   }
-  .small-text{
+  .small-text {
     @apply text-[0.75rem] font-semibold leading-[140%] text-gray-md;
   }
-  .heading-4{
-    
+  .heading-4 {
+  }
+  .reg_top {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+      ),
+      url(../public/assets/images/Rectangle.png),
+      lightgray 0px -341.108px / 99.95% 529.907% no-repeat;
+    @apply min-h-[214px] bg-no-repeat bg-cover w-full rounded-[25px];
   }
 }

@@ -92,8 +92,11 @@ const ClientSupport = () => {
         ))}
       </div>
 
-      <div className="flex  mx-auto items-center justify-between">
-        <div className=" inline-flex items-center gap-2">
+      <div className="flex  mx-auto items-center gap-5   sm:justify-between">
+        <div
+          style={{ background: "rgba(249, 249, 249, 0.89)" }}
+          className=" rounded-[10px] px-4 py-7 inline-flex items-center gap-2"
+        >
           <div className=" w-14 h-14 rounded-[13px] grid place-items-center bg-primary-blue">
             <Phone className="text-white" />
           </div>
@@ -106,12 +109,12 @@ const ClientSupport = () => {
             </p>
           </div>
         </div>
-        <Button variant="secondary" className="h-[55px] gap-2">
+        <Button variant="secondary" className=" gap-2">
           <Plus />
           Créer un ticket
         </Button>
       </div>
-      <div className="w-full max-w-[1119px] mx-auto">
+      <div className="w-full max-w-[95%] mx-auto">
         <Table className="min-w-max w-full table-auto">
           <TableHeader>
             <TableRow>

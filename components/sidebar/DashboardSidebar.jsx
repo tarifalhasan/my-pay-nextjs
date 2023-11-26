@@ -24,6 +24,7 @@ const Sidebar = () => {
 
   const handleClickLink = (i) => {
     setClickIndex(i);
+    setIsOpenChild(true);
   };
   const pathName = usePathname();
 
@@ -58,12 +59,32 @@ const Sidebar = () => {
       ),
       children: [
         {
-          label: "En proceso",
-          href: "/operaciones/in-progress",
+          label: "Log",
+          href: "/dashboard/client/api/log",
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+            >
+              <path d="M17.6338 6.57892L13.5877 2.53269C13.2843 2.22928 12.8818 2.0625 12.4538 2.0625H8.24992C5.84917 2.0625 3.89575 4.01592 3.89575 6.41667V15.5833C3.89575 17.9841 5.84917 19.9375 8.24992 19.9375H13.7499C16.1507 19.9375 18.1041 17.9841 18.1041 15.5833V7.71278C18.1041 7.2847 17.9373 6.88142 17.6338 6.57892ZM13.5208 4.40922L15.7565 6.64494H15.1249C14.2403 6.64494 13.5208 5.92535 13.5208 5.04077V4.40922ZM13.7499 18.5625H8.24992C6.60725 18.5625 5.27075 17.226 5.27075 15.5833V6.41667C5.27075 4.774 6.60725 3.4375 8.24992 3.4375H12.1458V5.04167C12.1458 6.68433 13.4823 8.02083 15.1249 8.02083H16.7291V15.5833C16.7291 17.226 15.3926 18.5625 13.7499 18.5625Z" />
+            </svg>
+          ),
         },
         {
-          label: "En proceso",
-          href: "/operaciones/processed",
+          label: "Application",
+          href: "/dashboard/client/api/application",
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+            >
+              <path d="M15.5833 2.0625H6.41667C4.01592 2.0625 2.0625 4.01592 2.0625 6.41667V11.9167C2.0625 14.3174 4.01592 16.2708 6.41667 16.2708H10.3125V18.5625H7.33333C6.95383 18.5625 6.64583 18.8705 6.64583 19.25C6.64583 19.6295 6.95383 19.9375 7.33333 19.9375H14.6667C15.0462 19.9375 15.3542 19.6295 15.3542 19.25C15.3542 18.8705 15.0462 18.5625 14.6667 18.5625H11.6875V16.2708H15.5833C17.9841 16.2708 19.9375 14.3174 19.9375 11.9167V6.41667C19.9375 4.01592 17.9841 2.0625 15.5833 2.0625ZM18.5625 11.9167C18.5625 13.5593 17.226 14.8958 15.5833 14.8958H6.41667C4.774 14.8958 3.4375 13.5593 3.4375 11.9167V6.41667C3.4375 4.774 4.774 3.4375 6.41667 3.4375H15.5833C17.226 3.4375 18.5625 4.774 18.5625 6.41667V11.9167Z" />
+            </svg>
+          ),
         },
       ],
     },
@@ -152,7 +173,7 @@ const Sidebar = () => {
     },
     {
       label: "Mon entreprise",
-      href: "/dashboard/client/créerticket",
+      href: "/dashboard/client/my-company",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -232,16 +253,24 @@ const Sidebar = () => {
                 <ul className=" pl-10 pt-3 space-y-2">
                   {item.children.map((data, index) => (
                     <li key={index} onClick={() => setIsOpenChild(false)}>
-                      <Link
-                        className={cn(
-                          "text-base font-medium",
-                          pathName.startsWith(data.href)
-                            ? "text-white"
-                            : "text-silver_text"
-                        )}
-                        href={data.href}
-                      >
-                        {data.label}
+                      <Link style={{ padding: "" }} href={data.href}>
+                        <button
+                          className={cn(
+                            "flex items-center    text-sm  text-dark-gray gap-2  w-full rounded-[3px]  py-3 px-2 font-semibold active:opacity-60",
+                            pathName === data.href && " text-primary-blue"
+                          )}
+                        >
+                          {React.cloneElement(data.icon, {
+                            className: cn(
+                              pathName === data.href
+                                ? "fill-primary-blue text-5xl"
+                                : "fill-gray-md"
+                            ),
+                          })}
+                          <span className="flex  text-base font-medium text-dark-foreground items-center gap-2">
+                            {data.label}
+                          </span>
+                        </button>
                       </Link>
                     </li>
                   ))}
