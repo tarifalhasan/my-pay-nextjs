@@ -34,6 +34,8 @@
 
     --radius: 0.5rem;
     --gray-550: 218, 19%, 44%, 1;
+    --gray-medium-blue-grey: 216, 22%, 58%, 1;
+    --error: 13, 93%, 70%, 1;
   }
 
   .dark {

@@ -47,22 +47,27 @@ module.exports = {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "hsla(var(--card))",
+          foreground: "hsla(var(--card-foreground))",
         },
-        "shade-blue": "hsl(var(--shade-blue))",
-        "gray-md": "hsl(var(--gray-md))",
-        "primary-blue": "hsl(var(--primary-blue))",
+        "shade-blue": "hsla(var(--shade-blue))",
+        "gray-md": "hsla(var(--gray-md))",
+        "primary-blue": "hsla(var(--primary-blue))",
         "light-gray": "var(--light-gray)",
-        "gray-550": "hsl(var(--gray-550))",
-        "light-info": "hsl(var(--light-info))",
-        "slate-info": "hsl(var(--slate-info))",
-        "light-success": "hsl(var(--light-success))",
+        "gray-550": "hsla(var(--gray-550))",
+        "light-info": "hsla(var(--light-info))",
+        "slate-info": "hsla(var(--slate-info))",
+        "light-success": "hsla(var(--light-success))",
+        "gray-medium-blue-grey": "hsla(var(--gray-medium-blue-grey))",
+        error: "#FA896B",
+        "light-warning": "#FEF5E5",
+        info: "#539BFF",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        12: "12px",
       },
       keyframes: {
         "accordion-down": {
@@ -77,6 +82,8 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+
+        "spin-slow": "spin 3s linear infinite",
       },
       fontSize: {
         "2xl": [
@@ -123,6 +130,14 @@ module.exports = {
             fontWeight: "600",
           },
         ],
+        "heading-2": [
+          "1.875rem",
+          {
+            lineHeight: "120%",
+            fontWeight: "600",
+            letterSpacing: "-0.3px",
+          },
+        ],
         "heading-5": [
           "1.125rem",
           {
@@ -134,6 +149,13 @@ module.exports = {
           "1.5rem",
           {
             lineHeight: "120%",
+            fontWeight: "600",
+          },
+        ],
+        "heading-4": [
+          "1.3125rem",
+          {
+            lineHeight: "130%",
             fontWeight: "600",
           },
         ],

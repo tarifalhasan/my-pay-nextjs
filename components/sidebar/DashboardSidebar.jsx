@@ -159,7 +159,7 @@ const Sidebar = () => {
     },
     {
       label: "Packs",
-      href: "/dashboard/client/créerticket",
+      href: "/dashboard/client/packs",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
