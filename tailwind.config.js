@@ -62,6 +62,7 @@ module.exports = {
         error: "#FA896B",
         "light-warning": "#FEF5E5",
         info: "#539BFF",
+        warning: "#FFE3E3",
       },
       borderRadius: {
         lg: "var(--radius)",
