@@ -12,7 +12,7 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "1xl": "1400px",
       },
     },
     extend: {
@@ -63,12 +63,19 @@ module.exports = {
         "light-warning": "#FEF5E5",
         info: "#539BFF",
         warning: "#FFE3E3",
+        langing: "#00020D",
+        "light-white": "#E1E1E1",
+      },
+      backgroundImage: {
+        hero: "url('/assets/images/hero.png')",
+        "gradient-sm": "linear-gradient(96deg, #4B86FC 0%, #75F2F6 26.45%)",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
         12: "12px",
+        8: "8px",
       },
       keyframes: {
         "accordion-down": {
@@ -158,6 +165,12 @@ module.exports = {
           {
             lineHeight: "130%",
             fontWeight: "600",
+          },
+        ],
+        "t-22": [
+          "1.375rem",
+          {
+            fontWeight: "500",
           },
         ],
       },

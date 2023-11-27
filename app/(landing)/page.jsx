@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
+import Hero from "@/components/landing/Hero";
 export default function Home() {
   return (
-    <div>
-      <Button>CLiel</Button>
+    <div className="flex flex-col min-h-screen">
+      <Hero />
     </div>
   );
 }

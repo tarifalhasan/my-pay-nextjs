@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { useSidebar } from "@/store/sidebarOpen";
 import DashboardHeader from "../Header/DashboardHeader";
 import Sidebar from "../sidebar/DashboardSidebar";
-const DashboardLayout = ({ childrens }) => {
+const DashboardLayout = ({ childrens, sidebarData }) => {
   const { openSidebar } = useSidebar();
 
   return (
@@ -15,8 +15,7 @@ const DashboardLayout = ({ childrens }) => {
           openSidebar ? "left-0  translate-x-0 " : "-translate-x-[100%]"
         )}
       >
-        {" "}
-        <Sidebar />
+        <Sidebar sidebarData={sidebarData} />
       </div>
       <main
         className={cn(

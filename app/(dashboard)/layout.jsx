@@ -1,4 +1,3 @@
-import DashboardLayout from "@/components/Layout/DashboardLayout";
 import { Toaster } from "@/components/ui/toaster";
 import "@/styles/globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
@@ -13,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <DashboardLayout childrens={children} />
+        {children}
         <Toaster />
       </body>
     </html>

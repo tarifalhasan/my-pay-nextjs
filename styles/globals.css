@@ -44,6 +44,8 @@
     --gray-550: 218, 19%, 44%, 1;
     --gray-medium-blue-grey: 216, 22%, 58%, 1;
     --error: 13, 93%, 70%, 1;
+
+    --landing: "#00020D";
   }
 
   .dark {
@@ -118,5 +120,24 @@
       url(../public/assets/images/Rectangle.png),
       lightgray 0px -341.108px / 99.95% 529.907% no-repeat;
     @apply min-h-[214px] bg-no-repeat bg-cover w-full rounded-[25px];
+  }
+  .light_text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero_btn {
+    @apply border-2 border-[#42A3FF] h-[65px] inline-flex items-center justify-center gap-1 px-4;
+    background: var(
+      --Linear,
+      linear-gradient(95deg, #4b86fc -75.89%, #75f2f6 155.97%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 40px;
   }
 }

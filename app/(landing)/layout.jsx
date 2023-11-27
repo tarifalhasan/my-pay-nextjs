@@ -1,7 +1,10 @@
-import { Plus_Jakarta_Sans } from "next/font/google";
-import "../globals.css";
+import "@/styles/globals.css";
+import { Poppins } from "next/font/google";
 
-const inter = Plus_Jakarta_Sans({ subsets: ["latin"] });
+const poopins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+});
 
 export const metadata = {
   title: "My pay landing page",
@@ -11,7 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={` bg-langing text-[#F7F7F7] ${poopins.className}`}>
+        {children}
+      </body>
     </html>
   );
 }
