@@ -1,4 +1,5 @@
 "use client";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -130,7 +131,15 @@ const ClientSupport = () => {
               <TableRow className="h-[65px]" key={i}>
                 <TableCell>{row.id}</TableCell>
                 <TableCell>{row.sujet}</TableCell>
-                <TableCell>{row.statut}</TableCell>
+                <TableCell>
+                  {" "}
+                  <Badge
+                    className={"w-[7rem]"}
+                    variant={row.statut === "Fermé" ? "refunded" : "open"}
+                  >
+                    {row.statut}
+                  </Badge>
+                </TableCell>
                 <TableCell>{row.date}</TableCell>
                 <TableCell className="text-right">
                   <Eye />

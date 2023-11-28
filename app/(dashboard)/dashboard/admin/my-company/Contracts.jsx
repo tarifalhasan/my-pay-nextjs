@@ -1,5 +1,14 @@
+import CreateContract from "@/components/modals/CreateContract";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Table,
   TableBody,
@@ -58,9 +67,24 @@ const Contracts = () => {
   ];
   return (
     <div className=" bg-white  w-full rounded-12 p-4 shadow-shadow-1">
-      <div>
-        <h5 className=" text-heading-5">Contrats</h5>
-        <p className="text-sm text-gray-md">Liste des contrats</p>
+      <div className="py-5 flex items-center justify-between gap-6 flex-wrap">
+        <div className=" ">
+          <h5 className=" text-heading-5">Contrats</h5>
+          <p className="text-sm text-gray-md">Liste des contrats</p>
+        </div>
+        <div className=" flex items-center gap-2">
+          <Button variant="secondary">Ajouter</Button>
+          <Select>
+            <SelectTrigger className="w-[158px]">
+              <SelectValue placeholder=" Novembre 2023" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="2023">February 2023</SelectItem>
+              <SelectItem value="2020">February 2023</SelectItem>
+              <SelectItem value="2023">February 2023</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
       <Table className="w-full min-w-max table-auto">
         <TableHeader>
@@ -71,9 +95,6 @@ const Contracts = () => {
             <TableHead className="text-sm font-semibold text-gray-medium-blue-grey">
               Nom du fournisseur
             </TableHead>
-            <TableHead className="text-sm font-semibold text-gray-medium-blue-grey">
-              Logo
-            </TableHead>
 
             <TableHead className="text-sm font-semibold text-gray-medium-blue-grey">
               Date
@@ -83,6 +104,9 @@ const Contracts = () => {
             </TableHead>
             <TableHead className="text-sm font-semibold text-gray-medium-blue-grey">
               Défaut
+            </TableHead>
+            <TableHead className="text-sm font-semibold text-gray-medium-blue-grey">
+              Action
             </TableHead>
           </TableRow>
         </TableHeader>
@@ -102,13 +126,13 @@ const Contracts = () => {
                   </p>
                 </div>
               </TableCell>
-              <TableCell className="text-sm text-gray-medium-blue-grey">
-                {data.supplier_name}
-              </TableCell>
               <TableCell>
-                <Avatar>
-                  <AvatarImage src={data.supplier_logo} />
-                </Avatar>
+                <div className="flex items-center gap-1">
+                  <Avatar>
+                    <AvatarImage src={data.supplier_logo} />
+                  </Avatar>
+                  <p className="text-sm  font-semibold">{data.supplier_name}</p>
+                </div>
               </TableCell>
               <TableCell className="text-sm">{data.date}</TableCell>
               <TableCell>
@@ -116,6 +140,12 @@ const Contracts = () => {
               </TableCell>
               <TableCell>
                 <Badge variant={"open"}>Actif</Badge>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-1">
+                  <CreateContract />
+                  <Button variant="secondary">Contrat prioritaire</Button>
+                </div>
               </TableCell>
             </TableRow>
           ))}

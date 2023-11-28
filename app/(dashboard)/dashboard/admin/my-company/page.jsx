@@ -2,6 +2,10 @@
 import Mask from "@/components/dashbaord/Mask";
 import Mypay from "@/components/dashbaord/Mypay";
 import { useRouter } from "next/navigation";
+import Contracts from "./Contracts";
+import ListOfApiRequest from "./ListOfApiRequest";
+import MyCompanyListOfInvoices from "./ListOfInvoices";
+import TableOfDocuments from "./TableOfDocuments";
 
 const MyCompanysss = () => {
   const router = useRouter();
@@ -34,10 +38,15 @@ const MyCompanysss = () => {
   ];
 
   return (
-    <div className="space-y-6 xl:space-y-10">
+    <div className="space-y-6 xl:space-y-10 mb-6">
       {/* mask */}
       <Mask title={"Informations de l’entreprise"} />
       <Mypay />
+      <TableOfDocuments />
+      <Contracts />
+      <MyCompanyListOfInvoices />
+      <ListOfApiRequest />
+      <TableOfDocuments />
     </div>
   );
 };
