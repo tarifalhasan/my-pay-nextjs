@@ -121,12 +121,15 @@
       lightgray 0px -341.108px / 99.95% 529.907% no-repeat;
     @apply min-h-[214px] bg-no-repeat bg-cover w-full rounded-[25px];
   }
+  .container {
+    @apply px-2 xl:px-4;
+  }
   .light_text {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .hero_btn {
-    @apply border-2 border-[#42A3FF] h-[65px] inline-flex items-center justify-center gap-1 px-4;
+    @apply border-2 bg-transparent border-[#42A3FF] relative overflow-hidden after:absolute after:w-full  hover:after:bg-gradient-sm h-[55px] inline-flex items-center justify-center gap-3 px-4 text-xl font-medium rounded-full;
     background: var(
       --Linear,
       linear-gradient(95deg, #4b86fc -75.89%, #75f2f6 155.97%)
@@ -134,10 +137,74 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 20px;
+  }
+  .standard_packdage {
+    border-radius: 10px;
+    border: 2px solid var(--Linear, #4b86fc);
+    background: rgba(241, 241, 255, 0.2);
+    backdrop-filter: blur(50px);
+  }
+  .premium_pack {
+    border-radius: 12px;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.45) 100%
+      ),
+      url(/assets/images/P2.png),
+      lightgray -51px -63.065px / 118.214% 137.917% no-repeat;
+    backdrop-filter: blur(19.5px);
+
+    @apply w-full  bg-cover bg-no-repeat rounded-[1.2rem] pb-5;
+  }
+  .pera {
+    font-size: 19px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: normal;
-    border-radius: 40px;
+    background: linear-gradient(97deg, #4b86fc -130.13%, #75f2f6 116.23%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  .input_dark {
+    border-radius: 13px;
+    background: var(
+      --Linear,
+      linear-gradient(
+        144deg,
+        rgba(255, 255, 255, 0.4) -278.56%,
+        rgba(109, 109, 109, 0.4) -78.47%,
+        rgba(17, 16, 29, 0.4) 91.61%
+      )
+    );
   }
 }
+
+/* .hero_btn {
+  transition: color 0.3s ease, background-color 0.3s ease;
+  color: #4b86fc;
+} */
+
+/* Apply the hover effect */
+/* .hero_btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background: linear-gradient(97deg, #4b86fc -55.87%, #4b86fc 51.18%);
+  transition: left 0.3s ease; 
+  z-index: -1; 
+} */
+/* .hero_btn:hover {
+  color: white;
+} */
+
+/* Change the left position on hover to reveal the gradient */
+/* .hero_btn:hover::after {
+  left: 0; 
+} */

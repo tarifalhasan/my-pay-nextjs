@@ -69,6 +69,12 @@ module.exports = {
       backgroundImage: {
         hero: "url('/assets/images/hero.png')",
         "gradient-sm": "linear-gradient(96deg, #4B86FC 0%, #75F2F6 26.45%)",
+        btn: "linear-gradient(97deg, #4B86FC -71.87%, #75F2F6 91.18%)",
+        bulb: "linear-gradient(90deg, #1A2980 0%, #26D0CE 100%)",
+        slider_bg:
+          "linear-gradient(144deg, rgba(255, 255, 255, 0.40) -278.56%, rgba(109, 109, 109, 0.40) -78.47%, rgba(17, 16, 29, 0.40) 91.61%)",
+        input_dark:
+          "linear-gradient(144deg, rgba(255, 255, 255, 0.40) -278.56%, rgba(109, 109, 109, 0.40) -78.47%, rgba(17, 16, 29, 0.40) 91.61%)",
       },
       borderRadius: {
         lg: "var(--radius)",

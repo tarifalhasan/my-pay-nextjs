@@ -1,19 +1,16 @@
 import { OurPaymentMethodsData } from "@/constants/data";
+import logo from "@/public/assets/images/Logo (1).svg";
 import heroImage from "@/public/assets/images/hero_assets.png";
 import Image from "next/image";
 import Link from "next/link";
+import CustomButton from "./CustomButton";
 const Hero = () => {
   return (
     <div className=" min-h-screen  w-full h-full bg-hero bg-no-repeat bg-cover">
       <div className="  relative">
-        <header className="flex  container py-5 items-center justify-between bg-transparent">
+        <header className="flex  container py-7 items-center justify-between bg-transparent">
           <Link href={"/"}>
-            <Image
-              src={"/assets/images/Logo (1).svg"}
-              alt="logo"
-              width={53}
-              height={52.909}
-            />
+            <Image className=" w-[90%] sm:w-full " src={logo} alt="logo" />
           </Link>
           <div className="flex items-center gap-1">
             <Image
@@ -22,7 +19,7 @@ const Hero = () => {
               width={34}
               height={34}
             />
-            <p className=" text-t-22">Espace client</p>
+            <p className=" text-[1rem] sm:text-t-22">Espace client</p>
           </div>
         </header>
         <div className="flex gap-10  px-0 lg:px-[1rem] flex-col container   lg:flex-row  relative overflow-hidden lg:items-center lg:justify-between">
@@ -41,40 +38,9 @@ const Hero = () => {
               Mercator es titulorum Pecuniae mutuatae ad diem Mercatores cryptae
               valutarum.
             </p>
-            <button className="hero_btn">
-              COMMENCER
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="37"
-                height="37"
-                viewBox="0 0 37 37"
-                fill="none"
-              >
-                <circle
-                  cx="18.5"
-                  cy="18.5"
-                  r="18.5"
-                  fill="url(#paint0_linear_111_1322)"
-                />
-                <path
-                  d="M14.817 12.0207L14.7551 13.8349L22.2618 13.8863L11.3038 24.6155L12.6445 25.9848L23.6026 15.2557L23.4826 22.7487L25.3496 22.7516L25.4572 12.0729L14.817 12.0207Z"
-                  fill="black"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_111_1322"
-                    x1="-55.5"
-                    y1="-10"
-                    x2="50"
-                    y2="37"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#4C88FC" />
-                    <stop offset="1" stop-color="#75F2F6" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </button>
+            <div>
+              <CustomButton title={"COMMENCER"} />
+            </div>
           </div>
           <div className=" ">
             <Image
@@ -85,7 +51,10 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className="container pt-[5rem] 2xl:pt-[7rem]">
+        <div className="container pt-[5rem] 2xl:pt-[5rem]">
+          <h2 className=" text-lg lg:text-3xl text-center pb-10">
+            Nos supports de paiement
+          </h2>
           <div className="flex  flex-wrap items-center  justify-between gap-5">
             {OurPaymentMethodsData.map((data) => (
               <div key={data.key}>{data.images}</div>
