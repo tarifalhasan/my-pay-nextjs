@@ -65,9 +65,12 @@ module.exports = {
         warning: "#FFE3E3",
         langing: "#00020D",
         "light-white": "#E1E1E1",
+        "white-50": "#F7F7F7",
+        "gray-12": "#B0B0B0",
       },
       backgroundImage: {
         hero: "url('/assets/images/hero.png')",
+        login_bg: "url('/assets/images/login_bg.png')",
         "gradient-sm": "linear-gradient(96deg, #4B86FC 0%, #75F2F6 26.45%)",
         btn: "linear-gradient(97deg, #4B86FC -71.87%, #75F2F6 91.18%)",
         bulb: "linear-gradient(90deg, #1A2980 0%, #26D0CE 100%)",

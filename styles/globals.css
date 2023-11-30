@@ -180,6 +180,15 @@
       )
     );
   }
+  .login_container {
+    border-radius: 30px;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.01) 0%,
+        rgba(0, 0, 0, 0.01) 100%
+      ),
+      #fff;
+  }
 }
 
 /* .hero_btn {
