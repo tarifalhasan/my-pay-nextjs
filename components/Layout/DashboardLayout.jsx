@@ -23,7 +23,7 @@ const DashboardLayout = ({ childrens, sidebarData }) => {
           openSidebar ? "xl:ml-[268px]" : "ml-0"
         )}
       >
-        <DashboardHeader />
+        <DashboardHeader sidebar_data={sidebarData} />
         {childrens}
       </main>
     </div>

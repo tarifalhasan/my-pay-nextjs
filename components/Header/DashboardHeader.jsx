@@ -14,7 +14,7 @@ import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import Sidebar from "../sidebar/DashboardSidebar";
 
-const DashboardHeader = () => {
+const DashboardHeader = ({ sidebar_data }) => {
   const { handleOpenSidebar } = useSidebar();
   const [openSidebarSheet, setOpenSidebarSheet] = useState(false);
   const [openSearchbar, setOpenSearchbar] = useState(false);
@@ -158,7 +158,7 @@ const DashboardHeader = () => {
       </div>
       <Sheet open={openSidebarSheet} onOpenChange={setOpenSidebarSheet}>
         <SheetContent>
-          <Sidebar />
+          <Sidebar sidebarData={sidebar_data} />
         </SheetContent>
       </Sheet>
     </header>
