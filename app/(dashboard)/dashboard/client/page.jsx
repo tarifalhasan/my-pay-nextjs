@@ -65,7 +65,17 @@ const DashboardClient = () => {
           </div>
         ))}
       </div>
-
+      <div className=" px-5 rounded-md bg-warning h-[75px]  inline-flex items-center gap-2">
+        <Image
+          src={"/assets/icons/imgpsh_fullsize_anim (11) 1 (1).png"}
+          alt=""
+          width={35}
+          height={35}
+        />
+        <p className="text-[#FF6174] text-base font-semibold">
+          Il faut que vous remplissiez des documents !
+        </p>
+      </div>
       <div className="grid grid-cols-12 gap-6">
         <div className=" col-span-12 xl:col-span-8 rounded-12 space-y-4 shadow-shadow-1 bg-white p-5">
           {/* Chiffre d’affaires */}
@@ -79,17 +89,6 @@ const DashboardClient = () => {
       <Contracts />
       <div className="flex  gap-6 flex-wrap">
         <WeeklyStatistics />
-        <div className=" px-5 rounded-md bg-warning h-[75px] flex items-center gap-2">
-          <Image
-            src={"/assets/icons/imgpsh_fullsize_anim (11) 1 (1).png"}
-            alt=""
-            width={35}
-            height={35}
-          />
-          <p className="text-[#FF6174] text-base font-semibold">
-            Il faut que vous remplissiez des documents !
-          </p>
-        </div>
       </div>
     </div>
   );

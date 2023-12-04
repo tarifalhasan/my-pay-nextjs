@@ -1,5 +1,6 @@
 "use client";
 import Mypay from "@/components/dashbaord/Mypay";
+import Pagination from "@/components/ui/Pagination";
 import {
   Table,
   TableBody,
@@ -83,6 +84,9 @@ const ClientSupport = () => {
             ))}
           </TableBody>
         </Table>
+        <div className="flex justify-center py-3">
+          <Pagination />
+        </div>
       </div>
     </div>
   );

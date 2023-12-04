@@ -1,4 +1,5 @@
 "use client";
+import Pagination from "@/components/ui/Pagination";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -148,6 +149,9 @@ const ClientSupport = () => {
             ))}
           </TableBody>
         </Table>
+        <div className="flex pt-4 items-center justify-center">
+          <Pagination />
+        </div>
       </div>
     </div>
   );

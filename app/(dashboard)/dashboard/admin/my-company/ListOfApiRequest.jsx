@@ -225,9 +225,36 @@ export default function ListOfApiRequest() {
             </TableBody>
           </Table>
           <div className="flex items-center justify-end space-x-2 py-4">
-            <div className=" text-sm text-muted-foreground">
-              {table.getFilteredSelectedRowModel().rows.length} of{" "}
-              {table.getFilteredRowModel().rows.length} row(s) selected.
+            <div className=" inline-flex items-center gap-4">
+              <p className="text-xs">Rows per page:</p>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className=" flex items-center gap-1">
+                    <span className=" text-=">5</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={20}
+                      height={20}
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M10.0002 12.4997L5.8335 8.33301H14.1668L10.0002 12.4997Z"
+                        fill="#2A3547"
+                      />
+                    </svg>
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>10</DropdownMenuItem>
+                  <DropdownMenuItem>20 </DropdownMenuItem>
+                  <DropdownMenuItem>13</DropdownMenuItem>
+                  <DropdownMenuItem>15</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <p className=" text-xs">1–5 of 12</p>
             </div>
             <div className="space-x-2">
               <button

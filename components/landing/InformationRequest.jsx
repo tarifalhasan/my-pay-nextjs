@@ -46,13 +46,13 @@ const InformationRequest = () => {
     console.log(data);
   };
   return (
-    <section className=" pt-8 xl:pt-16 pb-7">
+    <section className=" pt-8 relative !z-50 xl:pt-16 pb-7">
       <div className="container">
         <h2 className=" text-center text-[1.8rem] leading-normal tracking-tight sm:text-[2.5rem] xl:text-[2.9375rem] font-mediums">
           Demande d’information
         </h2>
         <form
-          className=" pt-6 xl:pt-10 space-y-6 max-w-[805px] mx-auto"
+          className=" pt-6 xl:pt-10 relative z-[9999] space-y-6 max-w-[805px] mx-auto"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className=" grid lg:grid-cols-2 gap-6">
