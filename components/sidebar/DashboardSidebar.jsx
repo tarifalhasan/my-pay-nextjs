@@ -38,7 +38,6 @@ const Sidebar = ({ sidebarData }) => {
         height: "100%",
       }}
       className="custom-scrollbar"
-      scrollbarWidth={0}
     >
       <div
         className={cn(
@@ -47,13 +46,18 @@ const Sidebar = ({ sidebarData }) => {
       >
         <div className="space-y-4">
           <Logo />
-          <div className=" py-3">
+          <div className=" py-3 flex items-center justify-between ">
+            <h6 className=" text-base font-semibold flex-1">Nom Entreprise</h6>
             <Select>
-              <SelectTrigger className=" w-full px-0  text-base focus:ring-0 focus:rounded-none border-none focus:outline-none outline-none !font-semibold">
-                <SelectValue placeholder="Nom Entreprise" />
+              <SelectTrigger className=" w-[80px] px-0  text-base focus:ring-0 focus:rounded-none border-none focus:outline-none outline-none !font-semibold">
+                <SelectValue placeholder="" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="light">Nom Entreprise</SelectItem>
+              <SelectContent className={"w-[60px]"}>
+                <SelectItem value="active">
+                  <Badge variant={"open"} className={"text-[#5A6A85]"}>
+                    Badge
+                  </Badge>
+                </SelectItem>
                 <SelectItem value="dark">Dark</SelectItem>
                 <SelectItem value="system">System</SelectItem>
               </SelectContent>

@@ -261,7 +261,7 @@ export default function ListOfApiRequest() {
                 onClick={() => table.previousPage()}
                 disabled={!table.getCanPreviousPage()}
               >
-                <ChevronLeft />
+                <ChevronLeft className=" opacity-20" />
               </button>
               <button
                 onClick={() => table.nextPage()}

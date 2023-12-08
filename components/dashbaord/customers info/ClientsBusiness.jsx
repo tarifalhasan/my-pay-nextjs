@@ -6,6 +6,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 import {
   flexRender,
@@ -15,7 +16,6 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import * as React from "react";
 
 import { Checkbox } from "@/components/ui/checkbox";
@@ -199,7 +199,7 @@ export default function ClientBusiness() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button className=" flex items-center gap-1">
-                    <span className=" text-=">5</span>
+                    <span className=" text-sm font-semibold">5</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={20}
@@ -230,13 +230,13 @@ export default function ClientBusiness() {
                 onClick={() => table.previousPage()}
                 disabled={!table.getCanPreviousPage()}
               >
-                <ChevronLeft />
+                <FaChevronLeft className=" w-5 h-5 text-[#EAEFF4]" />
               </button>
               <button
                 onClick={() => table.nextPage()}
                 disabled={!table.getCanNextPage()}
               >
-                <ChevronRight />
+                <FaChevronRight className=" w-5 h-5 text-[#2A3547]" />
               </button>
             </div>
           </div>
