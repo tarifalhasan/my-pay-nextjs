@@ -37,7 +37,8 @@ const Sidebar = ({ sidebarData }) => {
         width: "100%",
         height: "100%",
       }}
-      trackVertical={(props) => <div {...props} className="track-vertical" />}
+      className="custom-scrollbar"
+      scrollbarWidth={0}
     >
       <div
         className={cn(
