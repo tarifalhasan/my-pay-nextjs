@@ -228,14 +228,21 @@ html {
   scroll-behavior: smooth;
 }
 /* Change the color and size of the scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-  background-color: transparent;
+/* Target the thumb of the vertical scrollbar */
+.react-custom-scrollbars-thumb-vertical {
+  background-color: #aaa;
 }
 
-/* Change the appearance of the thumb */
-::-webkit-scrollbar-thumb {
-  background: lightslategray;
-
-  border-radius: 100px;
+/* Target the track of the vertical scrollbar */
+.react-custom-scrollbars-track-vertical {
+  background-color: #eee;
+}
+track-vertical {
+  width: 10px !important;
+}
+/* Increase the width of the vertical scrollbar */
+/* You might need to adjust this selector based on the specific structure of your scrollbars */
+/* This is just a sample selector */
+.react-custom-scrollbars-scrollbar-vertical {
+  width: 12px !important;
 }
