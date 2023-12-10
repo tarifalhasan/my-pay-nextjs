@@ -31,6 +31,18 @@ const Sidebar = ({ sidebarData }) => {
   };
   const pathName = usePathname();
 
+  const [selectedCompany, setSelectedCompany] = useState("");
+  const [companies, setCompanies] = useState([
+    { name: "Company A", status: "approved" },
+    { name: "Company B", status: "unapproved" },
+    // Add more companies with their statuses as needed
+  ]);
+
+  const handleCompanyChange = (value) => {
+    setSelectedCompany(value);
+    // Additional logic based on company selection can be added here
+  };
+
   return (
     <Scrollbars
       style={{
@@ -46,20 +58,26 @@ const Sidebar = ({ sidebarData }) => {
       >
         <div className="space-y-4">
           <Logo />
-          <div className=" py-3 flex items-center justify-between ">
-            <h6 className=" text-base font-semibold flex-1">Nom Entreprise</h6>
-            <Select>
-              <SelectTrigger className=" w-[80px] px-0  text-base focus:ring-0 focus:rounded-none border-none focus:outline-none outline-none !font-semibold">
-                <SelectValue placeholder="" />
+          <div className=" py-3 flex  ">
+            {/*  */}
+            <Select onValueChange={handleCompanyChange}>
+              <SelectTrigger className="f  w-full px-0 py-10  text-base focus:ring-0 focus:rounded-none border-none focus:outline-none outline-none !font-semibold">
+                <SelectValue className=" w-full" placeholder="" />
               </SelectTrigger>
-              <SelectContent className={"w-[60px]"}>
-                <SelectItem value="active">
-                  <Badge variant={"open"} className={"text-[#5A6A85]"}>
-                    Badge
-                  </Badge>
-                </SelectItem>
-                <SelectItem value="dark">Dark</SelectItem>
-                <SelectItem value="system">System</SelectItem>
+              <SelectContent align="end" className={"w-[100%] [&>span]:w-full"}>
+                {companies.map((c, i) => (
+                  <SelectItem key={i} value={c.status} className="w-full">
+                    <div className=" flex items-center w-full  gap-x-2 justify-between">
+                      <h6 className=" text-sm font-semibold ">{c.name}</h6>
+                      <Badge
+                        variant={c.status === "approved" ? "open" : "cancel"}
+                        className={"text-[#5A6A85] block"}
+                      >
+                        {c.status}
+                      </Badge>
+                    </div>
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>
